@@ -1,0 +1,70 @@
+
+
+custom_data_in: 67 003839373031b534300000000000000000002020202020202020202020202020202000001d8b00002020000000006009d5471645da63ebc07ad6820427af235e000000004600 0001 0008
+[50022.00ns] custom_data_in tx_host_[1]: Len: 70,  LSB bits: 8, observe_data:: 2400
+NetworkData_dma: 67 003839373031b534300000000000000000002020202020202020202020202020202000001d8b00002020000000006009d5471645da63ebc07ad6820427af235e000000004600
+[50299.05ns] tx_net_[1]_enctypted: 7324083902500000000000000000954cf877023ce60a0c3ce60af6ac064000400000280000450008017c7314aafc02e729530f90
+[50299.05ns] tx_net_[1]: Length: 512 ip_Len: 40 tcp_Len: 20 Payload_len: 0,  observe_data:: 0, host_seq: 00000000, self_seq: 00000000, syn: 1,  ack: 0, fin: 0, rst: 0, 
+[50302.15ns] tx_net_[1]_decrypted: 7324083902500000000000000000954cf877023ce60a0c3ce60af6ac064000400000280000450008017c7314aafc02e729530f90
+[50379.65ns] tcp valid 1 2 3: ERR
+[50385.85ns] tcp valid 1 2 3: ERR
+[50392.05ns] tcp valid 1 2 3: VALID
+[50398.25ns] rx_net_[1]: Length: 464 ip_Len: 44 tcp_Len: 24 Payload_len: 0,  observe_data:: 0, host_seq: 1b8b5e52, self_seq: 00000001, syn: 1,  ack: 1, fin: 0, rst: 0, 
+[50503.65ns] tx_net_[1]_enctypted: 85aa08391050535e8b1b01000000954cf877023ce60a0c3ce60af5ac064000400100280000450008017c7314aafc02e729530f90
+[50503.65ns] tx_net_[1]: Length: 512 ip_Len: 40 tcp_Len: 20 Payload_len: 0,  observe_data:: 0, host_seq: 00000001, self_seq: 1b8b5e53, syn: 0,  ack: 1, fin: 0, rst: 0, 
+[50506.75ns] tx_net_[1]_decrypted: 85aa08391050535e8b1b01000000954cf877023ce60a0c3ce60af5ac064000400100280000450008017c7314aafc02e729530f90
+[50605.95ns] tx_net_[1]_enctypted: 3839373031b534300000000000000000002020202020202020202020202020202000001d8b00002020000000006009d5471645da63ebc07ad6820427af235e0100000046000000098508391850535e8b1b01000000954cf877023ce60a0c3ce60aaeac0640004002006e0000450008017c7314aafc02e729530f90
+[50605.95ns] tx_net_[1]: Length: 992 ip_Len: 110 tcp_Len: 90 Payload_len: 70,  observe_data:: 2400, host_seq: 00000001, self_seq: 1b8b5e53, syn: 0,  ack: 1, fin: 0, rst: 0, 
+[50609.05ns] tx_net_[1]_decrypted: 3839373031b534300000000000000000002020202020202020202020202020202000001d8b00002020000000006009d5471645da63ebc07ad6820427af235e0100000046000000098508391850535e8b1b01000000954cf877023ce60a0c3ce60aaeac0640004002006e0000450008017c7314aafc02e729530f90
+[50615.25ns] rx_net_[1]: Length: 432 ip_Len: 40 tcp_Len: 20 Payload_len: 0,  observe_data:: 0, host_seq: 1b8b5e53, self_seq: 00000047, syn: 0,  ack: 1, fin: 0, rst: 0, 
+[50903.55ns] rx_net_[1]: Length: 1216 ip_Len: 138 tcp_Len: 118 Payload_len: 98,  observe_data:: 2401, host_seq: 1b8b5e53, self_seq: 00000047, syn: 0,  ack: 1, fin: 0, rst: 0, 
+[51334.45ns] rx_net_[1]: Length: 432 ip_Len: 40 tcp_Len: 20 Payload_len: 0,  observe_data:: 0, host_seq: 1b8b5eb5, self_seq: 00000047, syn: 0,  ack: 1, fin: 1, rst: 0, 
+[51452.25ns] tx_net_[1]_enctypted: d8a908391450b65e8b1b47000000954cf877023ce60a0c3ce60af3ac064000400300280000450008017c7314aafc02e729530f90
+[51452.25ns] tx_net_[1]: Length: 512 ip_Len: 40 tcp_Len: 20 Payload_len: 0,  observe_data:: 0, host_seq: 00000047, self_seq: 1b8b5eb6, syn: 0,  ack: 1, fin: 0, rst: 1, 
+[51455.35ns] tx_net_[1]_decrypted: d8a908391450b65e8b1b47000000954cf877023ce60a0c3ce60af3ac064000400300280000450008017c7314aafc02e729530f90
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+00007324083902500000000000000000954cf877 023ce60a0c3ce60af6ac06400040000028000045 0008017c7314aafc02e729530f90
+{tcpHdr 160, ipHdr 160 bit, ethHdr 112 bit}
+
+ethHdr:- 
+       0008017c7314aafc02e729530f90
+etherNet 2 or DIX structure:- {{des mac, src mac, etherType},  Payload , CRC checkSum CRC32}	   
+	                                  14Bytes                   46-1500    4Bytes
+	   
+iphdr:- 023ce60a0c3ce60af6ac06400040000028000045	   
+
+
+tcpHdr:- 00007324083902500000000000000000954cf877
+{16'h0, tcp_check, 16'h0839, tcp_flags, tcp_ack_seq_twiddled, tcp_seq_twiddled, tcp_dest, tcp_source};
+ 0000   7324       0839      0250       00000000              00000000          954c      f877
+  URG   checksu    window    flag       ACK                   seq               dst port  source port
+  
+  flags:- (FIN, SYN, RST, PSH, ACK, URG, ECE, CWR, Reserved, Data offset )
+           16   15   14   13   12   11   10    9   8 7 6 5 4  3 2 1 0
+
+tcp_flags={3'b0, tcp_ack, tcp_psh, tcp_rst, tcp_syn, 1'b0, 4'd5, 4'b0};   		   
+     CWR ECE URG ACK      PSH      RST      SYN      FIN
+	 
+	
+
+RFC 791: standard
+ipHdr = {ip_daddr, ip_saddr, ip_check, 8'h06, 8'h40, 16'h0040, ChangeEndian_16(ip_id), ChangeEndian_16(ip_tot_len), 8'h0, 8'h45};	
+	 
+   0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |Version|  IHL  |Type of Service|          Total Length         |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |         Identification        |Flags|      Fragment Offset    |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |  Time to Live |    Protocol   |         Header Checksum       |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                       Source Address                          |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                    Destination Address                        |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                    Options                    |    Padding    |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   
+   S7eZ03yZ^9Kn
